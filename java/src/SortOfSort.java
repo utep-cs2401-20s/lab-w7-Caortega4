@@ -13,7 +13,7 @@ public class SortOfSort {
         int countLeft = 0;
 
         //There will be n swaps therefore a loop to execute the inner loop that amount of times
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length - 1; i++) {
             //It will not check a number that is already sorted so it will start checking after that
             highestIndex = leftOffset;
             //In order to not check indices that are already sorted it will start after and end before the corresponding offsets
@@ -43,6 +43,7 @@ public class SortOfSort {
                 if (countLeft == 2){
                     countRight = 0;
                 }
+                //
             }
         }
     }
