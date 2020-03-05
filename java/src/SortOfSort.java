@@ -2,16 +2,13 @@ public class SortOfSort {
     public static void sortOfSort(int[] nums){
 
         //If the input array is size 1 or 0 that means it is already sorted so it does not changes anything
-        if(nums.length < 2)
-            return ;
-
+        if(nums.length < 2)return ;
         int highestIndex = 0;
         int temp = Integer.MIN_VALUE;
         int leftOffset = 0;
         int rightOffset = 0;
         int countRight = 0;
         int countLeft = 0;
-
         //There will be n swaps therefore a loop to execute the inner loop that amount of times
         for (int i = 0; i < nums.length - 1; i++) {
             //It will not check a number that is already sorted so it will start checking after that
@@ -33,7 +30,6 @@ public class SortOfSort {
                 rightOffset++;
                 countRight++;
             }else {
-
                 temp = nums[leftOffset];
                 nums[leftOffset] = nums[highestIndex];
                 nums[highestIndex] = temp;
@@ -44,6 +40,7 @@ public class SortOfSort {
                     countRight = 0;
                 }
                 //
+
             }
         }
     }
